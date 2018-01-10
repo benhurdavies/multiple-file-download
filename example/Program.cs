@@ -12,9 +12,10 @@ namespace example
         public static void Main()
         {
             //file download 
-            string downloadFile = "http://speedtest.ftp.otenet.gr/files/test1Mb.db";
-            var FileDownloader = Factory.GetDownloader(Helper.GetProtocol(downloadFile));
-            FileDownloader.Download(downloadFile, @"D:\");
+            string downloadFile1 = "http://speedtest.ftp.otenet.gr/files/test1Mb.db";
+            string downloadFile2 = "http://speedtest.ftp.otenet.gr/files/test100k.db";
+            FileDownloader fileDownload = new FileDownloader();
+            fileDownload.DownloadFiles(new string[] { downloadFile1, downloadFile2 }, "d:");
 
         }
     }

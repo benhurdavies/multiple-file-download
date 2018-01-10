@@ -24,7 +24,6 @@ namespace MultipleFileDownloader
             try
             {
                 client.DownloadFile(SrourcePath, DestinationDirectory + "\\" + Helper.GetFileName(SrourcePath));
-
             }
             catch (Exception e)
             {
